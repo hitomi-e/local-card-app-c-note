@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f0fbfa;
   --foreground: #171717;
 }
 
@@ -10,6 +10,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* アプリカラーテーマ */
+  --color-primary: #81d8d0;      /* ブルーグリーン（ベースカラー）*/
+  --color-primary-dark: #5bbfb6; /* ホバー・押下時 */
+  --color-accent: #E8B84B;       /* マスタードイエロー（アクセント）*/
+  --color-accent-dark: #d4a43a;  /* ホバー・押下時 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +29,32 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+ * Chrome / Edge のパスワード入力欄に自動表示される
+ * ネイティブ「パスワードを表示」ボタンを非表示にする。
+ * カスタムの目玉ボタンと混同されないようにするための対策。
+ */
+.pw-input::-ms-reveal,
+.pw-input::-ms-clear {
+  display: none;
+}
+.pw-input::-webkit-credentials-auto-fill-button,
+.pw-input::-webkit-strong-password-auto-fill-button,
+.pw-input::-webkit-contacts-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*
+ * iPhoneでの入力時の自動ズーム防止。
+ * font-size が 16px 未満の input/textarea をタップすると iOS が画面をズームする。
+ * Tailwind のユーティリティクラス（@layer utilities）より後に宣言することで上書きする。
+ */
+input:not([type="hidden"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
+textarea,
+select {
+  font-size: 16px;
 }

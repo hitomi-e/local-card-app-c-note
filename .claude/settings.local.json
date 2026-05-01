@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npx tsc:*)",
+      "Bash(curl -s https://nextjs.org/docs/messages/middleware-to-proxy)",
+      "Bash(node:*)",
+      "Bash(npx:*)",
+      "Bash(curl -s -o /dev/null -w \"ステータス: %{http_code} → リダイレクト先: %{redirect_url}\" http://localhost:3000/)",
+      "Bash(taskkill /PID 22408 /F)",
+      "Bash(curl:*)",
+      "Bash(cmd /c \"taskkill /PID 22408 /F\")",
+      "Bash(cmd /c \"taskkill /F /IM node.exe\")",
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(mkdir -p \"C:\\\\local-card-app\\\\src\\\\lib\\\\ocr\")",
+      "Bash(mkdir -p \"C:\\\\local-card-app\\\\src\\\\app\\\\api\\\\ocr\")",
+      "Bash(mkdir -p \"C:\\\\local-card-app\\\\src\\\\app\\\\\\(app\\)\\\\scan\")",
+      "Bash(taskkill /PID 3436 /F)",
+      "Bash(cmd.exe /c \"taskkill /PID 3436 /F\")",
+      "Bash(ipconfig *)",
+      "Bash(xargs ls *)",
+      "Bash(xargs grep *)"
+    ]
+  }
+}
