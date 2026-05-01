@@ -129,7 +129,6 @@ export async function parseBusinessCard(
         model: 'gemini-2.5-flash',
         contents: [{ parts }],
       },
-      { timeout: 60_000 } // 60秒タイムアウト（AI処理待ちに対応）
     );
 
     responseText = response.text ?? '';
