@@ -124,7 +124,7 @@ export function NewsCheckButton({ companyName, address, websiteUrl, industry }: 
                 >
                   <Newspaper size={15} className="text-white shrink-0" />
                   <span className="text-white text-sm font-bold">
-                    AIが提案する会話のきっかけ
+                    AIが提案する会話の<br />きっかけ
                   </span>
                   {result.isIndustryFallback && (
                     /* 白背景に濃いピンク文字でコントラストを確保 */
