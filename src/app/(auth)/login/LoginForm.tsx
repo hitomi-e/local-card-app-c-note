@@ -155,7 +155,7 @@ export default function LoginForm({ action, redirect }: LoginFormProps) {
       <p className="mt-6 text-center text-sm text-gray-500">
         アカウントをお持ちでない方は{" "}
         <Link
-          href="/signup"
+          href={redirect ? `/signup?redirect=${encodeURIComponent(redirect)}` : "/signup"}
           className="text-[#81d8d0] font-semibold hover:text-[#5bbfb6] transition-colors"
         >
           新規登録
